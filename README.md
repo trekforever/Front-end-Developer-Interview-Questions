@@ -148,6 +148,7 @@ this.push(this[i])
 ```
 * Describe a strategy for memoization (avoiding calculation repetition) in JavaScript.
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
+  * **Answer**: It is used as an if-else expression. Ternary is composed of three items, that's because there are only 3 items in the expression. [conditional expression] ? [if expression is true] : [if expression is false]
 * What is the arity of a function?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
   * **Answer**: It catches some common coding bloopers, throwing exceptions and It prevents, or throws errors, when relatively "unsafe" actions are taken.
@@ -211,6 +212,7 @@ Question: What is the value of foo.length?
 * What is the effects (or fx) queue?
 * What is the difference between `.get()`, `[]`, and `.eq()`?
 * What is the difference between `.bind()`, `.live()`, and `.delegate()`?
+  * **Answer**: .bind() attaches an eventlistener to all the selectors that are matched. Very expensive, not good, not dynamic. .live() attaches an eventlistener to the document object (only once). Can use dynamic, but depreciated, useless selection since only attaches to document, cannot use chaining. .delegate() is like .live() but you can pick what selector to attach. Dynamic and can use chaining. 3 parameters instead $(selectorAnchor).delegate(selectorEvent, event, function)
 * What is the difference between `$` and `$.fn`? Or just what is `$.fn`.
 * Optimize this selector:
 ```javascript
