@@ -140,6 +140,12 @@ function Person(){} var person = Person() var person = new Person()
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is the arity of a function?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+  * **Answer**: It catches some common coding bloopers, throwing exceptions and It prevents, or throws errors, when relatively "unsafe" actions are taken.
+    * Disallows global variables - cause it is bad practice using them!
+    * Cannot delete undeletable properties! Would throw an error!
+    * Assigning values to non-writable properties - would throw an error!
+    * All properties named in an object literal be unique! `var o = { p: 1, p: 2 }; // !!! syntax error`
+    * Function argument parameters also need to be unique!
 
 ### JS-Code Examples:
 
@@ -147,13 +153,13 @@ function Person(){} var person = Person() var person = new Person()
 ~~3.14
 ```
 Question: What value is returned from the above statement?
-**Answer: 3**
+**Answer: 3** This is because `~~` is a shortcut for Math.floor function.
 
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 Question: What value is returned from the above statement?
-**Answer: "goh angasal a m'i"**
+**Answer: "goh angasal a m'i"** Reversed string. Note if you just want the words to be reversed, like "hog lasagna a i'm", then you would use `.split(' ').reverse().join(' ')`
 
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
@@ -181,7 +187,7 @@ var foo = {};
 foo.bar = 'hello';
 ```
 Question: What is the value of foo.length?
-**Answer: `undefined`
+**Answer: `undefined` This is because length is only part of the Array prototype, not Object. Although Array is an object and will inherit object prototype methods, object will not inherit array's.
 
 ### jQuery-Specific Questions:
 
