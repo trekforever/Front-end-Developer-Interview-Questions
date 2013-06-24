@@ -136,6 +136,16 @@ function Person(){} var person = Person() var person = new Person()
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
 ```
+  * **Answer**:
+
+```javascript
+Array.prototype.duplicate = 
+function(){var len = this.length;
+for(var i =0; i < len; i++)
+{
+this.push(this[i])
+}}
+```
 * Describe a strategy for memoization (avoiding calculation repetition) in JavaScript.
 * Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is the arity of a function?
