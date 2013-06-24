@@ -33,7 +33,10 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Can you describe your workflow when you create a web page?
 * Can you describe the difference between progressive enhancement and graceful degradation?
   * Bonus points for describing feature detection
+  **Answer: Progressive Enhancement essentially means starting from the bottom up. Make sure your website works at its minimial level (without any technologies), and then enhance it layer by layer (adding interaction, css, etc) to improve user experience while being mindful of older browsers that cannot support the newer technologies (having static page when ajax can't work, noscript javascript tags, etc). Put Content First.
+  **Answer: Graceful Degradation essentially means starting from the top and working down. Your website is designed using HTML5, CSS3, javascript, and all of those latest technologies. Then from there, you add in compatibilities for older browsers (IE using conditional tags). 
 * Explain what "Semantic HTML" means.
+  **Answer: It means using HTML markup to represent the content and meaning of the website rather than presentation.
 * How would you optimize a websites assets/resources?
   * Looking for a number of solutions which can include:
     * File concatenation
