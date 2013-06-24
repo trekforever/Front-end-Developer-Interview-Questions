@@ -211,6 +211,7 @@ Question: What is the value of foo.length?
   * Selector (string), HTML (string), Callback (function), HTMLElement, object, array, element array, jQuery Object etc.
 * What is the effects (or fx) queue?
 * What is the difference between `.get()`, `[]`, and `.eq()`?
+  * **Answer**: .get() returns a DOM element, .eq() returns a jQuery object (can use jquery functions on it), and [] is the same as .get()
 * What is the difference between `.bind()`, `.live()`, and `.delegate()`?
   * **Answer**: .bind() attaches an eventlistener to all the selectors that are matched. Very expensive, not good, not dynamic. .live() attaches an eventlistener to the document object (only once). Can use dynamic, but depreciated, useless selection since only attaches to document, cannot use chaining. .delegate() is like .live() but you can pick what selector to attach. Dynamic and can use chaining. 3 parameters instead $(selectorAnchor).delegate(selectorEvent, event, function)
 * What is the difference between `$` and `$.fn`? Or just what is `$.fn`.
