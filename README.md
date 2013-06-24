@@ -33,10 +33,10 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Can you describe your workflow when you create a web page?
 * Can you describe the difference between progressive enhancement and graceful degradation?
   * Bonus points for describing feature detection
-  **Answer: Progressive Enhancement essentially means starting from the bottom up. Make sure your website works at its minimial level (without any technologies), and then enhance it layer by layer (adding interaction, css, etc) to improve user experience while being mindful of older browsers that cannot support the newer technologies (having static page when ajax can't work, noscript javascript tags, etc). Put Content First.
-  **Answer: Graceful Degradation essentially means starting from the top and working down. Your website is designed using HTML5, CSS3, javascript, and all of those latest technologies. Then from there, you add in compatibilities for older browsers (IE using conditional tags). 
+  * **Answer**: Progressive Enhancement essentially means starting from the bottom up. Make sure your website works at its minimial level (without any technologies), and then enhance it layer by layer (adding interaction, css, etc) to improve user experience while being mindful of older browsers that cannot support the newer technologies (having static page when ajax can't work, noscript javascript tags, etc). Put Content First.
+  * **Answer**: Graceful Degradation essentially means starting from the top and working down. Your website is designed using HTML5, CSS3, javascript, and all of those latest technologies. Then from there, you add in compatibilities for older browsers (IE using conditional tags). 
 * Explain what "Semantic HTML" means.
-  **Answer: It means using HTML markup to represent the content and meaning of the website rather than presentation.
+  * **Answer**: It means using HTML markup to represent the content and meaning of the website rather than presentation.
 * How would you optimize a websites assets/resources?
   * Looking for a number of solutions which can include:
     * File concatenation
@@ -46,7 +46,9 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
     * etc.
 * Why is it better to serve site assets from multiple domains?
   * How many resources will a browser download from a given domain at a time?
+  * **Answer**: To improve speed. Each browser has as limit on concurrent connections per domain. Chrome, for example, only allows 6 http connections at once per host.
 * Name 3 ways to decrease page load. (perceived or actual load time)
+  * **Answer**: Compress content, using gzip compression for example. Also can minify content to reduce resources' size.  Putting CSS and javascript in external files, referencing css at the top of the webpage, and javascript files at the end of the webpage. Also cache whenever possible.
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
   * Suggest the project utilize something like EditorConfig (http://editorconfig.org)
   * Conform to the conventions (stay consistent)
@@ -62,27 +64,39 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 ### HTML-Specific Questions:
 
 * What's a `doctype` do?
+  * **Answer**: Defines the document type
 * What's the difference between standards mode and quirks mode?
+  * **Answer**: Quirks mode emulates behavior and layout for old browsers like NetScape or IE5. Standards emulates behavior described by the HTML and CSS standards.
 * What are the limitations when serving XHTML pages?
   * Are there any problems with serving pages as `application/xhtml+xml`?
 * How do you serve a page with content in multiple languages?
   * What kind of things must you be wary of when design or developing for multilingual sites?
 * What are `data-` attributes good for?
+  * **Answer**: Custom data variables, can be easily accessed using the dataset property of DOM.
 * Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+ * **Answer**: HTML5 at its core is still a layout language that gives structure to your sites. The building blocks are just the various semantic tags that give your site meaning and structure.
 * Describe the difference between cookies, sessionStorage and localStorage.
+  * **Answer**: Cookies are permanent (until they expire) key-value pairs logged by a website in your hard drive, can be used by all browsers (not browser-specific). session and localStorage are supported only on HTML5 browsers. sessionStorage stores key-value pairs of data, but are cleaned when a user closes the browser. localStorage stores key-value pairs forever until deleted by user or the website. 
 
 ### JS-Specific Questions
 
 * Explain event delegation
+  * **Answer**: Two models - event bubble and event capture. Event bubbling describe that an event will 'bubble up' to all of its parents when initiated. Event capture describes that an event will 'propagate down' to all of its children when initiated.
 * Explain how `this` works in JavaScript
+  * **Answer**: `this` refers to the object of the current execution context and scope. `this` is redetermined everytime a new execution context is ran.
 * Explain how prototypal inheritance works
+  * **Answer**: Javascript is a dynamic, weakly typed language. Unlike other languages, Javascript does not have classes. In terms of inheritance, objects is the only thing that Javascript have. But it has the notion of a prototypical object, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the prototype for another object, allowing the second object to share the first object's properties. 
 * How do you go about testing your JavaScript?
+  * **Answer**: Custom tests using eval, using the debugger on firebug/javascript console (step-by-step debugging), putting a watch on all the variables and observe the stack at each step. Can also use try and catch statements too. 
 * AMD vs. CommonJS?
 * What's a hashtable?
 * What are `undefined` and `undeclared` variables?
+  * **Answer**: `undefined` is when variables are declared but not initalized (does not have a value). `undeclared` variables means just that - variables that are not declared yet. Will throw a reference error when ran.
 * What is a closure, and how/why would you use one?
   * Your favorite pattern used to create them? argyle (Only applicable to IIFEs)
+  * **Answer**: A closure is like keeping a copy of all the local variables, just as they were when a function exited. Like a stack-frame which is not deallocated when the function returns. Useful because it is convenient making your code more clear and readable, although you can achieve the same things without them.
 * What's a typical use case for anonymous functions?
+  * **Answer**: Code brevity, scope management (Anonymous functions can be used to create temporary/private scope), useful in closures. 
 * Explain the "JavaScript module pattern" and when you'd use it.
   * Bonus points for mentioning clean namespacing.
   * What if your modules are namespace-less?
@@ -92,7 +106,9 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 ```javascript
 function Person(){} var person = Person() var person = new Person()
 ```
+  * **Answer**: new creates an instance of a new object. Without new, ```var person``` will not be allocated and will be undefined after.
 * What's the difference between `.call` and `.apply`?
+  * **Answer**: They do the same thing except that .call function is invoked with separated arguments (explicitly) whereas .apply takes in an array of arguments.
 * explain `Function.prototype.bind`?
 * When do you optimize your code?
 * Can you explain how inheritance works in JavaScript?
@@ -104,13 +120,16 @@ function Person(){} var person = Person() var person = new Person()
 * Have you ever used JavaScript templating?
   * If so, what libraries have you used? (Mustache.js, Handlebars etc.)
 * Explain "hoisting".
+  * **Answer**: Variable declarations can be anywhere in javascript function, but they are 'hoisted' to the top of the function at runtime.
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
 * Why is extending built ins a good idea?
 * Difference between document load event and document ready event?
 * What is the difference between `==` and `===`?
+  * **Answer**: `==` is evil, only checks for value equality, whereas `===` checks for both type and value.
 * Explain how you would get a query string parameter from the browser window's URL.
+  * **Answer**: No standard way, but can use document.baseURI to get the URL and use regexp to extract the query.
 * Explain the same-origin policy with regards to JavaScript.
 * Describe inheritance patterns in JavaScript.
 * Make this work:
