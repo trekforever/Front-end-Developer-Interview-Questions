@@ -206,6 +206,7 @@ Question: What is the value of foo.length?
 * Explain "deferreds".
 * What are some jQuery specific optimizations you can implement?
 * What does `.end()` do?
+  * **Answer**: Goes back to the state before filtering
 * How, and why, would you namespace a bound event handler?
 * Name 4 different values you can pass to the jQuery method.
   * Selector (string), HTML (string), Callback (function), HTMLElement, object, array, element array, jQuery Object etc.
@@ -225,23 +226,30 @@ $(".foo div#bar:eq(0)")
 ### CSS-Specific Questions:
 
 * Describe what a "reset" CSS file does and how it's useful.
+  * **Answer**: Reduce browser inconsistencies by setting like default line heights, margins, font sizes, etc. Blueprint and Bootstrap.
 * Describe Floats and how they work.
 * What are the various clearing techniques and which is appropriate for what context?
+* **Answer**: 1) Can add a new div with style `clear:both` to html 2) Can use the psuedo class `:after` to do the same thing but also with `content:' ';` 3) lastly can set overflow to either hidden or auto and width 100% (or any)
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * CSS property hacks, conditionally included .css files, or... something else?
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
 * What are the different ways to visually hide content (and make it available only for screen readers)?
+  * **Answer**: Absolute positioning 0 height overflow hidden, or position overflow and move offscreen, or clip
 * Have you ever used a grid system, and if so, what do you prefer?
+  * **Answer**: Most reset css provides a grid system, like Bootstrap
 * Have you used or implemented media queries or mobile specific layouts/CSS?
+  * **Answer**: `@media (max-width: 600px) and (min-width: 700px) and (orientation: landscape)`
 * Any familiarity with styling SVG?
 * How do you optimize your webpages for print?
+  * **Answer**: Separate CSS, can use `@media print`
 * What are some of the "gotchas" for writing efficient CSS?
 * What are the advantages/disadvantages of using CSS preprocessors? (SASS, Compass, Stylus, LESS)
   * If so, describe what you like and dislike about the CSS preprocessors you have used.
 * How would you implement a web design comp that uses non-standard fonts?
   * Webfonts (font services like: Google Webfonts, Typekit etc.)
+  * **Answer**: Can link external fonts like Google Webfonts or Adobe Edge Web Fonts
 * Explain how a browser determines what elements match a CSS selector?
 
 ### Optional fun Questions:
