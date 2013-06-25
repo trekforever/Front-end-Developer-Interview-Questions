@@ -78,6 +78,18 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Describe the difference between cookies, sessionStorage and localStorage.
   * **Answer**: Cookies are permanent (until they expire) key-value pairs logged by a website in your hard drive, can be used by all browsers (not browser-specific). session and localStorage are supported only on HTML5 browsers. sessionStorage stores key-value pairs of data, but are cleaned when a user closes the browser. localStorage stores key-value pairs forever until deleted by user or the website. 
 
+### Browser-Internals Questions
+* Main Flow and Render Tree - What are they?
+* 
+
+### Misc Technologies To Know
+* Less and Sass for CSS Preprocessing
+* Tools useful for JS 
+  * JSLint
+  * Grunt.Js
+  * YUI Compressor
+  * JCharts and HighCharts
+
 ### JS-Specific Questions
 
 * Explain event delegation
