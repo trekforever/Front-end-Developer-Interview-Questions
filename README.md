@@ -80,7 +80,8 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 
 ### Browser-Internals Questions
 * Main Flow and Render Tree - What are they?
-* 
+  * **Answer**: The mainflow of the browser rendering engine is something like this: Parses the HTML tags to DOM nodes to produce a DOM tree --> Parsing the CSS and styling information to construct a render tree --> Layout of the render tree --> Paint the render tree
+  * **Answer**: The render tree is similar to DOM tree but with styling information along with visual instructions in HTML. These are simply a list of elements that are to be rendered (for example display: none html elements will not be on this tree, neither would script or head tags).
 
 ### Misc Technologies To Know
 * Less and Sass for CSS Preprocessing
