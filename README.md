@@ -144,7 +144,7 @@ function Person(){} var person = Person() var person = new Person()
 * Explain how you would get a query string parameter from the browser window's URL.
   * **Answer**: No standard way, but can use document.baseURI to get the URL and use regexp to extract the query.
 * Explain the same-origin policy with regards to JavaScript.
-* Describe inheritance patterns in JavaScript.
+* **Answer**: It's a security policy to protect the confidentially and integrity of information of on the web. It prevents a website scripts from interacting with other scripts in other websites.
 * Make this work:
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
