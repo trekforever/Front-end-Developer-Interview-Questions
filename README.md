@@ -123,8 +123,8 @@ function Person(){} var person = Person() var person = new Person()
 * What's the difference between `.call` and `.apply`?
   * **Answer**: They do the same thing except that .call function is invoked with separated arguments (explicitly) whereas .apply takes in an array of arguments.
 * explain `Function.prototype.bind`?
+  * **Answer**: Binds the execution environment to a current context (creating a boundary).
 * When do you optimize your code?
-* Can you explain how inheritance works in JavaScript?
 * When would you use `document.write()`?
   * Most generated ads still utilize `document.write()` although its use is frowned upon
 * What's the difference between feature detection, feature inference, and using the UA string
