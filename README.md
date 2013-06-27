@@ -33,6 +33,7 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * What excites or interests you about coding?
 * Talk about your preferred development environment. (OS, Editor, Browsers, Tools etc.)
 * Can you describe your workflow when you create a web page?
+  * **Answer**: Mockup/Design --> Feedback (Usually the job of a UI Designer) --> High level Requirements analysis --> picking technologies/languages and framework --> psuedo-code --> If use framework, start with skeleton (Progressive Enhancement Methodology)
 * Can you describe the difference between progressive enhancement and graceful degradation?
   * Bonus points for describing feature detection
   * **Answer**: Progressive Enhancement essentially means starting from the bottom up. Make sure your website works at its minimial level (without any technologies), and then enhance it layer by layer (adding interaction, css, etc) to improve user experience while being mindful of older browsers that cannot support the newer technologies (having static page when ajax can't work, noscript javascript tags, etc). Put Content First.
@@ -40,7 +41,7 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Explain what "Semantic HTML" means.
   * **Answer**: It means using HTML markup to represent the content and meaning of the website rather than presentation.
 * How would you optimize a websites assets/resources?
-  * Looking for a number of solutions which can include:
+  * **Answer**: Looking for a number of solutions which can include:
     * File concatenation
     * File minification
     * CDN Hosted
@@ -52,16 +53,13 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Name 3 ways to decrease page load. (perceived or actual load time)
   * **Answer**: Compress content, using gzip compression for example. Also can minify content to reduce resources' size.  Putting CSS and javascript in external files, referencing css at the top of the webpage, and javascript files at the end of the webpage. Also cache whenever possible.
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
-  * Suggest the project utilize something like EditorConfig (http://editorconfig.org)
-  * Conform to the conventions (stay consistent)
-  * `issue :retab! command`
-* Write a simple slideshow page
-  * Bonus points if it does not use JS.
+  * **Answer**: Suggest the project utilize something like EditorConfig (http://editorconfig.org)
+    * Conform to the conventions (stay consistent)
+    * `issue :retab! command`
 * What tools do you use to test your code's performance?
-  * Profiler, JSPerf, Dromaeo
+  * **Answer**: Profiler, JSPerf, Dromaeo
 * If you could master one technology this year, what would it be?
 * Explain the importance of standards and standards bodies.
-* What is FOUC? How do you avoid FOUC?
 
 ### HTML-Specific Questions:
 
@@ -102,7 +100,7 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Explain how `this` works in JavaScript
   * **Answer**: `this` refers to the object of the current execution context and scope. `this` is redetermined everytime a new execution context is ran.
 * Explain how prototypal inheritance works
-  * **Answer**: Javascript is a dynamic, weakly typed language. Unlike other languages, Javascript does not have classes. In terms of inheritance, objects is the only thing that Javascript have. But it has the notion of a prototypical object, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the prototype for another object, allowing the second object to share the first object's properties. 
+  * **Answer**: Javascript is a dynamic, weakly typed language. Unlike other languages, Javascript does not have classes. In terms of inheritance, objects is the only thing that Javascript have. But it has the notion of a prototypicl object, an object used as a template from which to get the initial properties for a new object. Any object can specify its own properties, either when you create it or at run time. In addition, any object can be associated as the prototype for another object, allowing the second object to share the first object's properties. 
 * How do you go about testing your JavaScript?
   * **Answer**: Custom tests using eval, using the debugger on firebug/javascript console (step-by-step debugging), putting a watch on all the variables and observe the stack at each step. Can also use try and catch statements too. 
 * AMD vs. CommonJS?
@@ -117,7 +115,10 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Explain the "JavaScript module pattern" and when you'd use it.
   * Bonus points for mentioning clean namespacing.
   * What if your modules are namespace-less?
+  * **Answer**: It's scalable (Modules are isolated pieces of code that when well designed, work independently of other modules and therefore can be removed and added as necessary), team-ready (individual files - more organized), localized ( Anonymous wrappers automatically create a new "namespace" for the whole module. This has performance advantages in garbage collection and scope chain walking. Furthermore, variables can be passed into the anonymous wrapper to localize commonly accessed global variables, such as window, document, and jQuery). 
 * How do you organize your code? (module pattern, classical inheritance?)
+  * **Answer**: Classical Inheritance - Reuse code as much as possible, create objects and inherited properties (follow C/Java Classical Approach)
+  * **Answer**: Module Pattern - Divide javascript codes into multiple files within directories, each file for a specific 'module'. Does not use inheritance as much, rather focuses on module - private vars/methods, module constructor, prototype.
 * What's the difference between host objects and native objects?
 * Difference between:
 ```javascript
@@ -135,10 +136,10 @@ function Person(){} var person = Person() var person = new Person()
 * Explain AJAX in as much detail as possible
 * Explain how JSONP works (and how it's not really AJAX)
 * Have you ever used JavaScript templating?
-  * If so, what libraries have you used? (Mustache.js, Handlebars etc.)
+  * If so, what libraries have you used?
+  * **Answer**: Examples: Handlebars, Underscore, Mustache
 * Explain "hoisting".
   * **Answer**: Variable declarations can be anywhere in javascript function, but they are 'hoisted' to the top of the function at runtime.
-* Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
 * Why is extending built ins a good idea?
@@ -256,6 +257,10 @@ $(".foo div#bar:eq(0)")
 * CSS property hacks, conditionally included .css files, or... something else?
 * How do you serve your pages for feature-constrained browsers?
   * What techniques/processes do you use?
+* What is the difference between `display:none;` and `visibility:hidden` and `opacity:0`
+  * **Answer**: The first one physicallys hies the element from DOM tree (removed from layout) whereas visibility and opacity does not. opacity is different in that event handlers will still be allowed (elements are clickable, etc).
+* What is z-index, and issues associated with that?
+  * **Answer**: z-index affects the stacking order of div elements. Only works with `position` elements (elements that have specific position, like absolute, relative, etc). Stacking order: background-->negative zindex-->block level boxes -->floated boxes --> inline boxes --> auto or 0 zindex --> pos zindex
 * What are the different ways to visually hide content (and make it available only for screen readers)?
   * **Answer**: Absolute positioning 0 height overflow hidden, or position overflow and move offscreen, or clip
 * Have you ever used a grid system, and if so, what do you prefer?
