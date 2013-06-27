@@ -2,6 +2,8 @@
 
 @version 2.0.0
 
+**Note:** This version contains additional questions from various companies I interviewed with for Frontend Developer, as well as answers for most of the questions that I believe is right.
+
 This repo contains a number of front-end interview questions that can be used when vetting potential candidates. It is by no means recommended to use every single question here on the same candidate (that would take hours). Choosing a few items from this list should help you vet the intended skills you require.
 
 [Rebecca Murphey](http://rmurphey.com/)'s [Baseline For Front-End Developers](http://rmurphey.com/blog/2012/04/12/a-baseline-for-front-end-developers/) is also a great resource to read up on before you head into an interview.
@@ -172,6 +174,8 @@ this.push(this[i])
     * Assigning values to non-writable properties - would throw an error!
     * All properties named in an object literal be unique! `var o = { p: 1, p: 2 }; // !!! syntax error`
     * Function argument parameters also need to be unique!
+* Write a calender system which can show scheduled meetings (from - to) and attendees. Sort the meetings according to some rules (ex: starting time in ascending order). Find out how many meetings are overlapped.
+  * **Answer**: http://pastebin.com/yCEvrz3r
 
 ### JS-Code Examples:
 
