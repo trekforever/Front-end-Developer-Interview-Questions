@@ -82,6 +82,8 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 * Main Flow and Render Tree - What are they?
   * **Answer**: The mainflow of the browser rendering engine is something like this: Parses the HTML tags to DOM nodes to produce a DOM tree --> Parsing the CSS and styling information to construct a render tree --> Layout of the render tree --> Paint the render tree
   * **Answer**: The render tree is similar to DOM tree but with styling information along with visual instructions in HTML. These are simply a list of elements that are to be rendered (for example display: none html elements will not be on this tree, neither would script or head tags).
+* Describe what happens when a user clicks a link in a browser
+* **Answer**: This is a very open-ended question. First the javascript event handlers trigger and run the associated functions with that. Afterwards it will issue a HTTP Get request (constructing the HTTP header), first to a local DNS resolver to resolve the domain name. If the domain is not found in the local DNS server, then depending on how your cache is set up, it will pass on the request to either the 1) Root DNS Server, 2) Top Level DNS Server, or 3) authoritive DNS server. From there it returns the associated IP address and port. Once your browser knows the IP address of the destination, it sends its request directly to that web server (can discuss how packets are constructed and routed and forwarded in a network), and the webserver generates a response (its associated header and response payload).
 
 ### Misc Technologies To Know
 * Less and Sass for CSS Preprocessing
