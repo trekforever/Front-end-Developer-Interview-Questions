@@ -176,6 +176,8 @@ this.push(this[i])
     * Function argument parameters also need to be unique!
 * Write a calender system which can show scheduled meetings (from - to) and attendees. Sort the meetings according to some rules (ex: starting time in ascending order). Find out how many meetings are overlapped.
   * **Answer**: http://pastebin.com/yCEvrz3r
+* Implement the Math.sqrt() function that takes the square root of a given number.
+  * **Answer**: http://goo.gl/zIkLP
 
 ### JS-Code Examples:
 
