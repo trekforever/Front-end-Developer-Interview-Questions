@@ -2,7 +2,7 @@
 
 @version 2.0.0
 
-**Note:** This version contains additional questions from various companies I interviewed with for Frontend Developer, as well as answers for most of the questions that I believe is right.
+**Note: This version contains additional questions from various companies I interviewed with for Frontend Developer, as well as answers for most of the questions that I believe is right. (Xin Wei)**
 
 This repo contains a number of front-end interview questions that can be used when vetting potential candidates. It is by no means recommended to use every single question here on the same candidate (that would take hours). Choosing a few items from this list should help you vet the intended skills you require.
 
