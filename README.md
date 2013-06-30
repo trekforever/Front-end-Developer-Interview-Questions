@@ -179,6 +179,10 @@ this.push(this[i])
   * **Answer**: http://pastebin.com/yCEvrz3r
 * Implement the Math.sqrt() function that takes the square root of a given number.
   * **Answer**: http://goo.gl/zIkLP
+* Implement an elevator controller for a 100-floor building.
+  * **Answer**: Very open-ended design and implementation question. For this implementation, assumed there will be 4 elevators. Each elevator will have a priority range (elevator 1 will prioritize and serve 1-25 floors, elevator 2 will do 26-50 floors, etc).
+  * **Design**: When a user requests an elevator, it will return the closest idle elevator or an elevator that is currently traveling the same direction that the user wants to go (but closer than any idle elevators). If all elevators are busy and going in opposite directions, it will select the elevator for the current range and add it to the queue (to serve next). After everything is done, elevator goes back to idle and returns to a random floor in its range.
+  * **Code**: http://pastebin.com/2n7nQBrz
 
 ### JS-Code Examples:
 
