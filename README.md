@@ -255,6 +255,8 @@ $(".foo div#bar:eq(0)")
 
 ### CSS-Specific Questions:
 
+* How to select empty textboxes? Using either CSS or javascript?
+  * **Answer**: For javascript, can use .value or jquery's .val() on a html input element to see if there is value or not. Can also use selectors $('input:text[value=""]')
 * Describe what a "reset" CSS file does and how it's useful.
   * **Answer**: Reduce browser inconsistencies by setting like default line heights, margins, font sizes, etc. Blueprint and Bootstrap.
 * Describe Floats and how they work.
