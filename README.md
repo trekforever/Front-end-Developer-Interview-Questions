@@ -83,7 +83,7 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
   * **Answer**: The mainflow of the browser rendering engine is something like this: Parses the HTML tags to DOM nodes to produce a DOM tree --> Parsing the CSS and styling information to construct a render tree --> Layout of the render tree --> Paint the render tree
   * **Answer**: The render tree is similar to DOM tree but with styling information along with visual instructions in HTML. These are simply a list of elements that are to be rendered (for example display: none html elements will not be on this tree, neither would script or head tags).
 * Describe what happens when a user clicks a link in a browser
-* **Answer**: This is a very open-ended question. First the javascript event handlers trigger and run the associated functions with that. Afterwards it will issue a HTTP Get request (constructing the HTTP header), first to a local DNS resolver to resolve the domain name. If the domain is not found in the local DNS server, then depending on how your cache is set up, it will pass on the request to either the 1) Root DNS Server, 2) Top Level DNS Server, or 3) authoritive DNS server. From there it returns the associated IP address and port. Once your browser knows the IP address of the destination, it sends its request directly to that web server (can discuss how packets are constructed and routed and forwarded in a network), and the webserver generates a response (its associated header and response payload).
+  * **Answer**: This is a very open-ended question. First the javascript event handlers trigger and run the associated functions with that. Afterwards it will issue a HTTP Get request (constructing the HTTP header), first to a local DNS resolver to resolve the domain name. If the domain is not found in the local DNS server, then depending on how your cache is set up, it will pass on the request to either the 1) Root DNS Server, 2) Top Level DNS Server, or 3) authoritive DNS server. From there it returns the associated IP address and port. Once your browser knows the IP address of the destination, it sends its request directly to that web server (can discuss how packets are constructed and routed and forwarded in a network), and the webserver generates a response (its associated header and response payload).
 
 ### Misc Technologies To Know
 * Less and Sass for CSS Preprocessing
@@ -141,7 +141,7 @@ function Person(){} var person = Person() var person = new Person()
 * Explain "hoisting".
   * **Answer**: Variable declarations can be anywhere in javascript function, but they are 'hoisted' to the top of the function at runtime. Assignments are not however! 
   * Follwup Question: Difference between var helloWorld = function() {...} versus function helloWorld() { ... }
-    * **Answer**: Hoisting! function helloWorld() will be hoisted to the top! var helloWorld will do that too, but the function body will not!
+  * **Answer**: Hoisting! function helloWorld() will be hoisted to the top! var helloWorld will do that too, but the function body will not!
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
 * Why is extending built ins a good idea?
@@ -151,7 +151,7 @@ function Person(){} var person = Person() var person = new Person()
 * Explain how you would get a query string parameter from the browser window's URL.
   * **Answer**: No standard way, but can use document.baseURI to get the URL and use regexp to extract the query.
 * Explain the same-origin policy with regards to JavaScript.
-* **Answer**: It's a security policy to protect the confidentially and integrity of information of on the web. It prevents a website scripts from interacting with other scripts in other websites.
+  * **Answer**: It's a security policy to protect the confidentially and integrity of information of on the web. It prevents a website scripts from interacting with other scripts in other websites.
 * Make this work:
 ```javascript
 [1,2,3,4,5].duplicate(); // [1,2,3,4,5,1,2,3,4,5]
@@ -192,26 +192,26 @@ this.push(this[i])
 ~~3.14
 ```
 Question: What value is returned from the above statement?
-**Answer: 3** This is because `~~` is a shortcut for Math.floor function.
+  * **Answer: 3** This is because `~~` is a shortcut for Math.floor function.
 
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
 Question: What value is returned from the above statement?
-**Answer: "goh angasal a m'i"** Reversed string. Note if you just want the words to be reversed, like "hog lasagna a i'm", then you would use `.split(' ').reverse().join(' ')`
+  * **Answer: "goh angasal a m'i"** Reversed string. Note if you just want the words to be reversed, like "hog lasagna a i'm", then you would use `.split(' ').reverse().join(' ')`
 
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
 ```
 Question: What is the value of window.foo?
-**Answer: "bar"**
+  * **Answer: "bar"**
 only if window.foo was falsey otherwise it will retain its value.
 
 ```javascript
 var foo = "Hello"; (function() { var bar = " World"; alert(foo + bar); })(); alert(foo + bar);
 ```
 Question: What is the outcome of the two alerts above?
-**Answer: "Hello World" & ReferenceError: bar is not defined**
+  * **Answer: "Hello World" & ReferenceError: bar is not defined**
 
 ```javascript
 var foo = [];
@@ -219,14 +219,14 @@ foo.push(1);
 foo.push(2);
 ```
 Question: What is the value of foo.length?
-**Answer: `2`
+  * **Answer**: `2`
 
 ```javascript
 var foo = {};
 foo.bar = 'hello';
 ```
 Question: What is the value of foo.length?
-**Answer: `undefined` This is because length is only part of the Array prototype, not Object. Although Array is an object and will inherit object prototype methods, object will not inherit array's.
+  * **Answer**: `undefined` This is because length is only part of the Array prototype, not Object. Although Array is an object and will inherit object prototype methods, object will not inherit array's.
 
 ### jQuery-Specific Questions:
 
@@ -246,6 +246,7 @@ Question: What is the value of foo.length?
 * What is the difference between `.bind()`, `.live()`, and `.delegate()`?
   * **Answer**: .bind() attaches an eventlistener to all the selectors that are matched. Very expensive, not good, not dynamic. .live() attaches an eventlistener to the document object (only once). Can use dynamic, but depreciated, useless selection since only attaches to document, cannot use chaining. .delegate() is like .live() but you can pick what selector to attach. Dynamic and can use chaining. 3 parameters instead $(selectorAnchor).delegate(selectorEvent, event, function)
 * What is the difference between `$` and `$.fn`? Or just what is `$.fn`.
+  * **Answer**: `$` is jquery function selector. `$.fn` selects the prototype of the init function of jquery. Useful when extending its prototype.
 * Optimize this selector:
 ```javascript
 $(".foo div#bar:eq(0)")
@@ -261,7 +262,7 @@ $(".foo div#bar:eq(0)")
   * **Answer**: Reduce browser inconsistencies by setting like default line heights, margins, font sizes, etc. Blueprint and Bootstrap.
 * Describe Floats and how they work.
 * What are the various clearing techniques and which is appropriate for what context?
-* **Answer**: 1) Can add a new div with style `clear:both` to html 2) Can use the psuedo class `:after` to do the same thing but also with `content:' ';` 3) lastly can set overflow to either hidden or auto and width 100% (or any)
+  * **Answer**: 1) Can add a new div with style `clear:both` to html 2) Can use the psuedo class `:after` to do the same thing but also with `content:' ';` 3) lastly can set overflow to either hidden or auto and width 100% (or any)
 * Explain CSS sprites, and how you would implement them on a page or site.
 * What are your favourite image replacement techniques and which do you use when?
 * CSS property hacks, conditionally included .css files, or... something else?
