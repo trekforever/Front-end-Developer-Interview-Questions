@@ -230,6 +230,8 @@ Question: What is the value of foo.length?
 
 ### jQuery-Specific Questions:
 
+* Given 5 buttons. I want the first button clicked to console.log "Hello World", all of the other buttons should console.log "Nayyy". Implement this in vanilla js and jquery.
+  * **Answer**: This is only a sample answer, other methods exist. http://jsfiddle.net/trekforever/4udzP/
 * Explain "chaining".
 * Explain "deferreds".
 * What are some jQuery specific optimizations you can implement?
