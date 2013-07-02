@@ -139,7 +139,9 @@ function Person(){} var person = Person() var person = new Person()
   * If so, what libraries have you used?
   * **Answer**: Examples: Handlebars, Underscore, Mustache
 * Explain "hoisting".
-  * **Answer**: Variable declarations can be anywhere in javascript function, but they are 'hoisted' to the top of the function at runtime.
+  * **Answer**: Variable declarations can be anywhere in javascript function, but they are 'hoisted' to the top of the function at runtime. Assignments are not however! 
+  * Follwup Question: Difference between var helloWorld = function() {...} versus function helloWorld() { ... }
+    * **Answer**: Hoisting! function helloWorld() will be hoisted to the top! var helloWorld will do that too, but the function body will not!
 * What's the difference between an "attribute" and a "property"?
 * Why is extending built in JavaScript objects not a good idea?
 * Why is extending built ins a good idea?
